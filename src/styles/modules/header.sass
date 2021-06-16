@@ -1,0 +1,61 @@
+.header
+	padding-top: 20px
+	padding-bottom: 20px
+	background-color: #fff
+
+	.container
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+
+	@media only screen and (min-width : $screen-md)
+		&--bordered
+			border-bottom: 2px solid #E2E2E2
+
+.connect-btn
+	background: #F8F8F8
+	width: 114px
+	height: 44px
+	color: #62514B
+
+	@media only screen and (min-width : $screen-xl)
+		display: flex
+		align-items: center
+		justify-content: center
+
+.connected-wallet
+	background: #F8F8F8
+	cursor: pointer
+	display: flex
+	align-items: center
+	justify-content: center
+
+	div
+		padding: 12px
+		text-transform: uppercase
+		font-size: 0.6rem
+		font-weight: 500
+		line-height: 19px
+
+	.chain-name
+		padding-left: 8px
+		color: #62514B
+	
+	.address
+		background: linear-gradient(134.79deg, #E34D6F 0%, #E9C54C 111.3%)
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+	
+	.gradient-dot
+		padding: 0
+		margin: 8px
+		width: 8px
+		height: 8px
+		border-radius: 50%
+		background: linear-gradient(134.79deg, #E34D6F 0%, #E9C54C 111.3%)
+
+.balance-of
+	margin-left: auto
+	display: flex
+	.token-name
+		margin-right: 20px
