@@ -1,4 +1,4 @@
-import BigNumber from 'bignumber.js'
+// import BigNumber from 'bignumber.js'
 
 export const getTokenSymbol = async (customContract) => {
   try {
@@ -17,10 +17,11 @@ export const getBalance = async (customContract, userAddress) => {
   }
 }
 
-export const transfer = async (customContract, amount, userAddress) => {
+export const transfer = async (customContract, amount, userAddress, sendAddress) => {
   try {
+    // const amountBigNum = new BigNumber(amount).times(new BigNumber(10).pow(18)).toString()
     return customContract.methods
-      .transfer(userAddress, new BigNumber(amount).times(new BigNumber(10).pow(18)).toString())
+      .transfer(sendAddress, amount)
       .send({ from: userAddress, gas: 200000 })
       .on('transactionHash', (tx) => {
         return tx.transactionHash

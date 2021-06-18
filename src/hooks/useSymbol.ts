@@ -13,7 +13,6 @@ const useSymbol = () => {
     async () => {
       try {
         const symbol = await getTokenSymbol(customContract)
-        console.info(symbol)
         return symbol
       } catch (e) {
         toastError(e.message)

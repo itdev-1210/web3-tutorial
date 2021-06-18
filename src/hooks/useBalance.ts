@@ -15,7 +15,6 @@ const useBalance = () => {
     async () => {
       try {
         const balance = await getBalance(customContract, account)
-        console.info(balance)
         return balance
       } catch (e) {
         toastError(e.message)
