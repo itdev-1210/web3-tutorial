@@ -7,7 +7,7 @@ export default function Updater() {
 
   useEffect(() => {
     const web3 = new Web3(library)
-
+    console.log(web3)
   }, [chainId, library])
 
   return null
