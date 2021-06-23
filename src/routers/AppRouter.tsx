@@ -3,6 +3,7 @@ import PublicRoute from './PublicRoute';
 import HomeScreen from 'pages/Home';
 import Header from 'components/Header';
 import ToastListener from 'components/ToastListener'
+import AppUpdater from 'store/updater'
 
 const AppRouter = () => {
   return (
@@ -18,6 +19,7 @@ const AppRouter = () => {
               component={HomeScreen}
             />
           </Switch>
+          <AppUpdater />
           <ToastListener />
         </Route>
       </Switch>
